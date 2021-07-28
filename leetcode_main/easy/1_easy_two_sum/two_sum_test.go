@@ -12,6 +12,7 @@ func TestTwoSum(t *testing.T)  {
 	}
 	testSet := []testExample{
 		{[]int{1,2,3,4,5,6},6},
+		{[]int{3,2,4},6},
 	}
 	for _,testExampleTemp := range testSet{
 		fmt.Println(twoSum(testExampleTemp.nums,testExampleTemp.target))
