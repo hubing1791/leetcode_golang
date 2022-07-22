@@ -6,9 +6,11 @@ import (
 	"io"
 	"net"
 	"os"
+	"time"
 )
 
 func main() {
+	//参数不足则退出
 	if len(os.Args) != 2 {
 		fmt.Println("Usage: ", os.Args[0], "host")
 		os.Exit(1)
@@ -31,6 +33,7 @@ func main() {
 	msg[3] = byte(check & 255)
 	_, err = conn.Write(msg[0:leng])
 	checkError(err)
+	_ = conn.SetDeadline(time.Now().Add(time.Second * 10))
 	_, err = conn.Read(msg[0:])
 	checkError(err)
 	fmt.Println("Got response")

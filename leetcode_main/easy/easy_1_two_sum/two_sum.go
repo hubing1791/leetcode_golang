@@ -1,4 +1,4 @@
-package __easy_two_sum
+package easy_1_two_sum
 
 import (
 	"sort"

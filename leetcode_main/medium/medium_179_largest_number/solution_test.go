@@ -11,7 +11,7 @@ func Test_largestNumber(t *testing.T) {
 		args args
 		want string
 	}{
-		// TODO: Add test cases.
+		{"normal", args{[]int{10, 2}}, "210"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

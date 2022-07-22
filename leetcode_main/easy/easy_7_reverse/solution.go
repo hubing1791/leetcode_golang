@@ -1,4 +1,4 @@
-package __easy_reverse
+package easy_7_reverse
 
 import "math"
 

@@ -1,4 +1,4 @@
-package __medium_longest_substring_without_repeating_characters
+package medium_3_longest_substring_without_repeating_characters
 
 func lengthOfLongestSubstring(s string) int {
 	hashtable := make(map[byte]int)
@@ -12,7 +12,7 @@ func lengthOfLongestSubstring(s string) int {
 			hashtable[s[pointer]] += 1
 			pointer += 1
 		}
-		if pointer-i >ans {
+		if pointer-i > ans {
 			ans = pointer - i
 		}
 	}
