@@ -1,8 +1,9 @@
 /*
 !go.mod
-!cracking_the_code_intreview
+!cracking_the_code_interview
 !custom_moudle
 !extra_practice
 !leetcode_main
 !sword
 *.exe
+!*.go
