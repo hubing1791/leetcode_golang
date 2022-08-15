@@ -80,6 +80,7 @@ func main() {
 		// 开始时间
 		t1 := time.Now()
 		conn.SetDeadline(t1.Add(time.Duration(time.Duration(timeout) * time.Millisecond)))
+		fmt.Println(data)
 		n, err := conn.Write(data)
 		if err != nil {
 			log.Fatal(err)
