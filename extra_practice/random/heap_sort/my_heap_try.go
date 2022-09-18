@@ -9,21 +9,21 @@ type myStruct struct {
 	ForS sortStruct
 }
 
-type myHeap []myStruct
+type l2DataHeap []myStruct
 
-func (m myHeap) Len() int {
+func (m l2DataHeap) Len() int {
 	return len(m)
 }
 
-func (m myHeap) Less(i, j int) bool {
+func (m l2DataHeap) Less(i, j int) bool {
 	return m[i].ForS.ForSort < m[j].ForS.ForSort
 }
 
-func (m myHeap) Swap(i, j int) {
+func (m l2DataHeap) Swap(i, j int) {
 	m[i], m[j] = m[j], m[i]
 }
 
-func (m *myHeap) Pop() interface{} {
+func (m *l2DataHeap) Pop() interface{} {
 	old := *m
 	n := len(old)
 	x := old[n-1]
@@ -31,6 +31,6 @@ func (m *myHeap) Pop() interface{} {
 	return x
 }
 
-func (m *myHeap) Push(x interface{}) { // 绑定push方法，插入新元素
+func (m *l2DataHeap) Push(x interface{}) { // 绑定push方法，插入新元素
 	*m = append(*m, x.(myStruct))
 }
