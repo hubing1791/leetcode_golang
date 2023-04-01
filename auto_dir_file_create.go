@@ -70,6 +70,7 @@ func AutoDirFileCreate(mainPath int, difficulty int, index string, url string) {
 	writeString := "package " + subPathStr + "\n\n//" + url + "\n" + "//" + getDate + "\n"
 	_, _ = file.WriteString(writeString)
 
+	file, _ = os.Create(finalPath + "/problem.md")
 	fmt.Println(finalPath)
 
 }
